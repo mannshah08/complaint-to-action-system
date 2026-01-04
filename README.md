@@ -28,3 +28,17 @@ This project transforms complaints into a transparent, community-driven system:
 ## How to Run
 ```bash
 python app.py
+
+## How to Run the Project Locally
+
+### Prerequisites
+- Python 3.10 or above
+- Git
+
+### Steps
+
+1. Clone the repository
+```bash
+git clone https://github.com/mannshah08/complaint-to-action-system.git
+cd complaint-to-action-system
+
