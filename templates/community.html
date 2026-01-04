@@ -8,8 +8,21 @@
 
 <body>
     <div class="top-bar">
-        <a href="/" class="home-btn">🏠 Home</a>
+        <div class="nav-left">
+            <a href="/" class="home-btn">🏠 Home</a>
+        </div>
+
+        <div class="nav-right">
+            {% if session.get("google_logged_in") %}
+            <span class="logged-in">Logged in</span>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            {% else %}
+            <a href="{{ url_for('login') }}" class="login-btn">Login with Google</a>
+            {% endif %}
+
+        </div>
     </div>
+
 
     <div class="container">
         <h1>Community Pulse</h1>

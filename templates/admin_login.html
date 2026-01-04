@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Login | AI Complaint System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container" id="admincontainer">
+        <h1>Admin Login</h1>
+
+        {% if error %}
+        <p style="color:red;"><b>{{ error }}</b></p>
+        {% endif %}
+
+        <form method="POST">
+            <h2>Admin Verification</h2>
+
+            {% if error %}
+            <p style="color:red">{{ error }}</p>
+            {% endif %}
+
+            <input type="password" name="password" placeholder="Admin Password" id="adminpassword" required>
+            <br>
+            <button type="submit">Enter Admin Panel</button>
+        </form>
+
+
+        <br>
+        <div>
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -8,9 +8,23 @@
 
 <body>
     <div class="top-bar">
-        <a href="/" class="home-btn">🏠 Home</a>
-        <a href="/community" class="home-btn">🌍 Community Pulse</a>
+        <div class="nav-left">
+            <a href="/" class="home-btn">🏠 Home</a>
+            <a href="/community" class="community-btn">📢 Community Pulse</a>
+        </div>
+
+        <div class="nav-right">
+            {% if session.get("google_logged_in") %}
+            <span class="logged-in">Logged in</span>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            {% else %}
+            <a href="{{ url_for('login') }}" class="login-btn">Login with Google</a>
+            {% endif %}
+
+        </div>
     </div>
+
+
 
 
     <div class="container">
@@ -47,9 +61,12 @@
             <button type="submit">Submit Complaint</button>
         </form>
 
+        {% if session.get("google_logged_in") %}
         <div id="adminLoginBtn" style="display:none; margin-top:20px;">
-            <a href="/login" class="admin-btn">🔐 Admin Login</a>
+            <a href="admin-auth" class="admin-btn">🔐 Admin Login</a>
         </div>
+        {% endif %}
+
 
 
         <script>
@@ -65,13 +82,15 @@
             }
         </script>
 
+
+
     </div>
     <!-- Admin Login Popup -->
     <div id="loginPopup"
         style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
         <div style="background:white; width:300px; padding:20px; margin:100px auto; border-radius:5px;">
             <h3>Admin Login</h3>
-            <form action="/login" method="post">
+            <form action="/admin_login" method="post">
                 <input type="password" name="password" placeholder="Enter password" required><br><br>
                 <button type="submit">Login</button>
                 <button type="button" onclick="closePopup()">Cancel</button>

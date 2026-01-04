@@ -9,7 +9,20 @@
 <body>
 
     <div class="top-bar">
-        <a href="/" class="home-btn">🏠 Home</a>
+        <div class="nav-left">
+            <a href="/" class="home-btn">🏠 Home</a>
+            <a href="/community" class="community-btn">📢 Community Pulse</a>
+        </div>
+
+        <div class="nav-right">
+            {% if session.get("google_logged_in") %}
+            <span class="logged-in">Logged in</span>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            {% else %}
+            <a href="{{ url_for('login') }}" class="login-btn">Login with Google</a>
+            {% endif %}
+
+        </div>
     </div>
 
     <div class="container">
@@ -51,7 +64,7 @@
                 <!-- STATUS DISPLAY -->
                 <td class="status {{ c.status }}">{{ c.status }}</td>
                 <td>{{ c.timestamp }}</td>
-                
+
                 <!-- STATUS CHANGE ACTION -->
                 <td>
                     <form action="/update_status/{{ c.id }}" method="post">
