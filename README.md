@@ -25,10 +25,7 @@ This project transforms complaints into a transparent, community-driven system:
 - SQLite
 - Rule-based AI logic (extensible to ML models)
 
-## How to Run
 ```bash
-python app.py
-
 ## How to Run the Project Locally
 
 ### Prerequisites
@@ -38,7 +35,23 @@ python app.py
 ### Steps
 
 1. Clone the repository
-```bash
+
 git clone https://github.com/mannshah08/complaint-to-action-system.git
 cd complaint-to-action-system
 
+2. Create and activate virtual environment
+
+python -m venv venv
+venv\Scripts\activate
+
+3. Install required dependencies
+
+Install required dependencies
+
+4. Run the application
+
+python app.py
+
+5. Open in browser
+
+Open in browser
