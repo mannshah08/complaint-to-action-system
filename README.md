@@ -123,7 +123,7 @@ Admins can:
 
 ---
 
-## 🏁 Conclusion
+##  Conclusion
 
 **Complaint to Action System** demonstrates how AI, authentication, and thoughtful system design can convert unstructured complaints into **clear, actionable priorities**.
 
