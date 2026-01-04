@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Community Pulse</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <a href="/" class="home-btn">🏠 Home</a>
+    </div>
+
+    <div class="container">
+        <h1>Community Pulse</h1>
+        <input type="text" id="searchInput" placeholder="Search issues..."
+            style="margin-bottom:15px; padding:10px; width:100%;" />
+
+        <p>Public issues raised by the community</p>
+
+        <table>
+            <tr>
+                <th>Issue</th>
+                <th>Category</th>
+                <th>Urgency</th>
+                <th>Status</th>
+                <th>Upvotes</th>
+            </tr>
+
+            {% for c in complaints %}
+            <tr class="{% if c.upvotes >= 5 %}trending{% endif %}">
+                <td>{{ c.text }}</td>
+                <td>{{ c.category }}</td>
+                <td>{{ c.urgency }}</td>
+                <td>{{ c.status }}</td>
+                <td>
+                    {{ c.upvotes }}
+                    {% if c.id in session.get("upvoted", []) %}
+                    <button disabled>✔</button>
+                    {% else %}
+                    <form action="/upvote/{{ c.id }}" method="post" style="display:inline;">
+                        <button type="submit">⬆️</button>
+                    </form>
+                    {% endif %}
+
+                </td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script>
+        document.getElementById("searchInput")?.addEventListener("input", function () {
+            const value = this.value.toLowerCase();
+            document.querySelectorAll("table tr").forEach((row, index) => {
+                if (index === 0) return; // skip header
+                row.style.display = row.innerText.toLowerCase().includes(value)
+                    ? ""
+                    : "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll("form").forEach(form => {
+            form.addEventListener("submit", () => {
+                const btn = form.querySelector("button");
+                if (btn) {
+                    btn.disabled = true;
+                    btn.innerText = "Processing...";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

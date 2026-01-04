@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard | AI Complaint System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <a href="/" class="home-btn">🏠 Home</a>
+    </div>
+
+    <div class="container">
+        <h1>Complaint Dashboard</h1>
+
+        <input type="text" id="searchInput" placeholder="Search issues..."
+            style="margin-bottom:15px; padding:10px; width:100%;" />
+
+        <div class="nav">
+            <a href="/admin">All</a>
+            <a href="/admin?urgency=High">High Priority</a>
+            <a href="/admin?urgency=Medium">Medium Priority</a>
+            <a href="/admin?urgency=Low">Low Priority</a>
+        </div>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Complaint</th>
+                <th>Category</th>
+                <th>Urgency</th>
+                <th>Status</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+
+
+            {% for c in complaints %}
+            <tr class="{{ c.urgency }}">
+                <td class="id-col">{{ c.id }}</td>
+                <td class="name-col">{{ c.name }}</td>
+                <td>{{ c.role }}</td>
+                <td>{{ c.text }}</td>
+                <td>{{ c.category }}</td>
+                <td>{{ c.urgency }}</td>
+
+                <!-- STATUS DISPLAY -->
+                <td class="status {{ c.status }}">{{ c.status }}</td>
+                <td>{{ c.timestamp }}</td>
+                
+                <!-- STATUS CHANGE ACTION -->
+                <td>
+                    <form action="/update_status/{{ c.id }}" method="post">
+                        <select name="status" onchange="this.form.submit()">
+                            <option value="New" {% if c.status=="New" %}selected{% endif %}>New</option>
+                            <option value="In Progress" {% if c.status=="In Progress" %}selected{% endif %}>In Progress
+                            </option>
+                            <option value="Resolved" {% if c.status=="Resolved" %}selected{% endif %}>Resolved</option>
+                        </select>
+                    </form>
+                </td>
+
+            </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+    <script>
+        document.getElementById("searchInput")?.addEventListener("input", function () {
+            const value = this.value.toLowerCase();
+            document.querySelectorAll("table tr").forEach((row, index) => {
+                if (index === 0) return; // skip header
+                row.style.display = row.innerText.toLowerCase().includes(value)
+                    ? ""
+                    : "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll("form").forEach(form => {
+            form.addEventListener("submit", () => {
+                const btn = form.querySelector("button");
+                if (btn) {
+                    btn.disabled = true;
+                    btn.innerText = "Processing...";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

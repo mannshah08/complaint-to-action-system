@@ -1,0 +1,361 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.High {
+    background-color: #ffcccc;
+}
+
+.Medium {
+    background-color: #fff0b3;
+}
+
+.Low {
+    background-color: #ccffcc;
+}
+
+.nav {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    color: #333;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-bar {
+    background: #1e293b;
+    padding: 10px 20px;
+}
+
+.home-btn {
+    color: white;
+    font-weight: bold;
+}
+
+/* TABLE STYLES (ADMIN) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Table header styling */
+th {
+    background-color: #e0f2fe;   /* light blue */
+    color: #0f172a;              /* dark navy */
+    font-weight: bold;
+    text-align: left;
+}
+
+tr.High {
+    background-color: #fee2e2;
+}
+
+tr.Medium {
+    background-color: #fef9c3;
+}
+
+tr.Low {
+    background-color: #dcfce7;
+}
+
+/* Status styling */
+.status.New {
+    background-color: #e5e7eb;
+    color: #111827;
+    font-weight: bold;
+}
+
+.status.In\ Progress {
+    background-color: #fde68a;
+    color: #92400e;
+    font-weight: bold;
+}
+
+.status.Resolved {
+    background-color: #bbf7d0;
+    color: #065f46;
+    font-weight: bold;
+}
+ 
+.navbar {
+    background-color: #f5f5f5;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+.top-bar a {
+    margin-right: 15px;
+}
+
+/* ---------- Global polish ---------- */
+body {
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ---------- Top bar ---------- */
+.top-bar {
+    background: #0f172a;
+    padding: 14px 24px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.top-bar a {
+    color: #e5e7eb;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.top-bar a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Container refinement ---------- */
+.container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ---------- Table improvements ---------- */
+table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+tr:hover td {
+    background-color: #f8fafc;
+}
+
+/* ---------- Urgency badges ---------- */
+td:nth-child(6) {
+    font-weight: bold;
+}
+
+tr.High td:nth-child(6) {
+    color: #b91c1c;
+}
+
+tr.Medium td:nth-child(6) {
+    color: #92400e;
+}
+
+tr.Low td:nth-child(6) {
+    color: #065f46;
+}
+
+/* ---------- Status badges ---------- */
+.status {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.status.New {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.status.In\ Progress {
+    background: #fde68a;
+    color: #92400e;
+}
+
+.status.Resolved {
+    background: #bbf7d0;
+    color: #065f46;
+}
+
+/* ---------- Community upvote emphasis ---------- */
+.community-upvotes {
+    font-weight: bold;
+    color: #1d4ed8;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.trending {
+    border-left: 6px solid #2563eb;
+    background: #eff6ff;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;   /* important */
+}
+
+td {
+    padding: 12px;
+    vertical-align: top;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.admin-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.admin-btn:hover {
+    background-color: #1a252f;
+}
