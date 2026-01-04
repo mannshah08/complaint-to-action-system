@@ -6,12 +6,11 @@ import sqlite3
 from flask_dance.contrib.google import make_google_blueprint, google
 import os
 
-
 app = Flask(__name__)
 
-app.secret_key = "supersecretkey"  # simple for MVP
+app.secret_key = "supersecretkey"  
 
-os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"  # allow http for local dev
+os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"  
 
 google_bp = make_google_blueprint(
     client_id="1083899840316-rlfd6frjaurr1tavp9ft3h548go9i3v1.apps.googleusercontent.com",
@@ -75,24 +74,6 @@ def admin_auth():
 @app.context_processor
 def inject_auth_status():
     return dict(is_logged_in=google.authorized)
-
-# @app.route("/admin")
-# def admin():
-#     if not session.get("google_logged_in"):
-#         return redirect(url_for("login"))
-
-#     if not session.get("is_admin"):
-#         return redirect(url_for("admin_auth"))
-
-#     conn = sqlite3.connect("complaints.db")
-#     conn.row_factory = sqlite3.Row
-
-#     complaints = conn.execute(
-#         "SELECT * FROM complaints ORDER BY id DESC"
-#     ).fetchall()
-
-#     conn.close()
-#     return render_template("admin.html", complaints=complaints)
 
 @app.route("/admin")
 def admin():
@@ -185,9 +166,4 @@ def logout():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
-    app.run(host="0.0.0.0", port=8080, debug=True)
-
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0", port=8080, debug=True)
-
-
+    app.run(host="0.0.0.0", port=port)
