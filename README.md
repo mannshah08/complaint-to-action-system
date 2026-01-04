@@ -1,94 +1,146 @@
-Complaint to Action System 🚨
+# 🚨 Complaint to Action System
 
-AI-powered complaint management & prioritization platform
+> **AI‑powered complaint management & prioritization platform**
 
-📌 Overview
+---
 
-Complaint to Action System is a web-based application that allows users to submit complaints, automatically classifies them using AI, and helps administrators prioritize and manage issues efficiently. The system supports Google OAuth authentication, admin-only access, and community visibility for public complaints.
+## 📌 Overview
 
-This project was built as an MVP for hackathon / academic evaluation, focusing on functionality, clarity, and deployment readiness.
+**Complaint to Action System** is a web‑based application that enables users to submit complaints, automatically classifies them using AI, and helps administrators **prioritize, track, and resolve issues efficiently**.
 
-🎯 Problem Statement
+This project was built as an **MVP for a hackathon / academic evaluation**, with emphasis on:
 
-Organizations receive a large number of complaints daily, making it difficult to:
+* Clear problem–solution mapping
+* Secure authentication
+* Practical AI usage
+* Deployment readiness
 
-Prioritize urgent issues
+---
 
-Separate public vs private complaints
+## 🎯 Problem Statement
 
-Ensure only authorized admins can access sensitive data
+Organizations receive a high volume of complaints every day. Most systems fail because they:
 
-Maintain transparency with the community
+* ❌ Treat all complaints equally, ignoring urgency
+* ❌ Mix sensitive and public issues
+* ❌ Lack proper access control for admins
+* ❌ Offer zero transparency to the community
 
-💡 Solution
+Result: **slow resolutions, poor trust, and operational chaos**.
 
-This system:
+---
 
-Uses AI-based text classification to categorize complaints and assign urgency
+## 💡 Solution
 
-Supports Google OAuth login for secure authentication
+The **Complaint to Action System** solves this by:
 
-Restricts admin panel access to authenticated users only
+* 🧠 Automatically classifying complaints using AI
+* ⚡ Assigning urgency levels for faster action
+* 🔐 Securing access using Google OAuth
+* 🌍 Enabling public complaint visibility for transparency
+* 🧑‍💼 Giving admins a focused, priority‑driven dashboard
 
-Allows users to make complaints public or private
+---
 
-Displays public complaints in a community-driven view
+## ✨ Key Features
 
-✨ Key Features
-🔐 Authentication
+### 🔐 Authentication
 
-Google OAuth 2.0 login
+* Google OAuth 2.0 login
+* Session‑based authentication
+* Login state reflected across all pages
+* Secure logout with session clearing
+* **Admin panel accessible only to authenticated users**
 
-Login status reflected across all pages
+---
 
-Logout clears session and redirects to home
+### 📝 Complaint Submission
 
-Admin panel accessible only after Google login
+Users can:
 
-📝 Complaint Submission
+* Select role: **Student / Visitor / Staff**
+* Choose complaint visibility: **Public or Private**
+* Submit complaints via a simple UI
 
-User role selection (Student / Visitor / Staff)
+Each complaint is automatically classified into:
 
-Public or Private visibility option
+* **Category**
+* **Urgency Level:** High / Medium / Low
 
-Automatic classification into:
+---
 
-Category
+### 🧠 AI‑Based Classification
 
-Urgency (High / Medium / Low)
+* Complaint text analyzed using a **rule‑based / ML classifier**
+* Determines urgency and category
+* Urgency is used to **prioritize admin actions**
 
-🧠 AI Classification
+> This keeps critical issues from getting buried under noise.
 
-Complaint text analyzed using a rule-based / ML classifier
+---
 
-Urgency used to prioritize admin actions
+### 🧑‍💼 Admin Panel
 
-🧑‍💼 Admin Panel
+Admins can:
 
-View all complaints
+* View all submitted complaints
+* Filter complaints by urgency:
 
-Filter complaints by urgency (High / Medium / Low)
+  * 🔴 High
+  * 🟡 Medium
+  * 🟢 Low
+* Update complaint status
+* Access data securely (authentication required)
 
-Update complaint status
+---
 
-Secure access control
+### 🌍 Community Pulse
 
-🌍 Community Pulse
+* Public complaints are visible to everyone
+* Complaints are **sorted by upvotes**
+* Encourages transparency and collective awareness
+* Helps identify recurring or systemic issues
 
-Public complaints visible to all users
+---
 
-Sorted by number of upvotes
+## 🧱 Tech Stack (Suggested / Typical)
 
-Encourages transparency and community feedback
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** Flask / Node.js
+* **Authentication:** Google OAuth 2.0
+* **AI Layer:** Rule‑based / ML text classifier
+* **Database:** SQLite (MVP)
 
-🔮 Future Enhancements
+---
 
-Role-based admin permissions
+## 🚀 Deployment Readiness
 
-Email notifications for high-priority complaints
+* Environment‑based configuration
+* Secure OAuth handling
+* Production‑ready project structure
+* Compatible with platforms like **Render / Vercel / Railway**
 
-Analytics dashboard
+---
 
-Cloud database (PostgreSQL / Firestore)
+## 🔮 Future Enhancements
 
-NLP model upgrade
+* 🔐 Role‑based admin permissions
+* 📧 Email notifications for high‑priority complaints
+* 📊 Analytics & insights dashboard
+* ☁️ Cloud database (PostgreSQL / Firestore)
+* 🧠 Advanced NLP model upgrade
+
+---
+
+## 🏁 Conclusion
+
+**Complaint to Action System** demonstrates how AI, authentication, and thoughtful system design can convert unstructured complaints into **clear, actionable priorities**.
+
+Built to be simple, scalable, and impactful — ideal for **hackathons, academic reviews, and real‑world adaptation**.
+
+---
+
+### 👤 Author
+
+**Mann Shah**
+Hackathon / Academic Project
