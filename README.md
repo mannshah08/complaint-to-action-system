@@ -1,10 +1,10 @@
-# 🚨 Complaint to Action System
+#  Complaint to Action System
 
 > **AI‑powered complaint management & prioritization platform**
 
 ---
 
-## 📌 Overview
+##  Overview
 
 **Complaint to Action System** is a web‑based application that enables users to submit complaints, automatically classifies them using AI, and helps administrators **prioritize, track, and resolve issues efficiently**.
 
@@ -17,34 +17,34 @@ This project was built as an **MVP for a hackathon / academic evaluation**, with
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Organizations receive a high volume of complaints every day. Most systems fail because they:
 
-* ❌ Treat all complaints equally, ignoring urgency
-* ❌ Mix sensitive and public issues
-* ❌ Lack proper access control for admins
-* ❌ Offer zero transparency to the community
+*  Treat all complaints equally, ignoring urgency
+*  Mix sensitive and public issues
+*  Lack proper access control for admins
+*  Offer zero transparency to the community
 
 Result: **slow resolutions, poor trust, and operational chaos**.
 
 ---
 
-## 💡 Solution
+##  Solution
 
 The **Complaint to Action System** solves this by:
 
-* 🧠 Automatically classifying complaints using AI
-* ⚡ Assigning urgency levels for faster action
-* 🔐 Securing access using Google OAuth
-* 🌍 Enabling public complaint visibility for transparency
-* 🧑‍💼 Giving admins a focused, priority‑driven dashboard
+*  Automatically classifying complaints using AI
+*  Assigning urgency levels for faster action
+*  Securing access using Google OAuth
+*  Enabling public complaint visibility for transparency
+*  Giving admins a focused, priority‑driven dashboard
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 🔐 Authentication
+###  Authentication
 
 * Google OAuth 2.0 login
 * Session‑based authentication
@@ -54,7 +54,7 @@ The **Complaint to Action System** solves this by:
 
 ---
 
-### 📝 Complaint Submission
+###  Complaint Submission
 
 Users can:
 
@@ -69,7 +69,7 @@ Each complaint is automatically classified into:
 
 ---
 
-### 🧠 AI‑Based Classification
+###  AI‑Based Classification
 
 * Complaint text analyzed using a **rule‑based / ML classifier**
 * Determines urgency and category
@@ -79,7 +79,7 @@ Each complaint is automatically classified into:
 
 ---
 
-### 🧑‍💼 Admin Panel
+###  Admin Panel
 
 Admins can:
 
@@ -94,7 +94,7 @@ Admins can:
 
 ---
 
-### 🌍 Community Pulse
+###  Community Pulse
 
 * Public complaints are visible to everyone
 * Complaints are **sorted by upvotes**
@@ -103,17 +103,8 @@ Admins can:
 
 ---
 
-## 🧱 Tech Stack (Suggested / Typical)
 
-* **Frontend:** HTML, CSS, JavaScript
-* **Backend:** Flask / Node.js
-* **Authentication:** Google OAuth 2.0
-* **AI Layer:** Rule‑based / ML text classifier
-* **Database:** SQLite (MVP)
-
----
-
-## 🚀 Deployment Readiness
+##  Deployment Readiness
 
 * Environment‑based configuration
 * Secure OAuth handling
@@ -122,13 +113,13 @@ Admins can:
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
-* 🔐 Role‑based admin permissions
-* 📧 Email notifications for high‑priority complaints
-* 📊 Analytics & insights dashboard
-* ☁️ Cloud database (PostgreSQL / Firestore)
-* 🧠 Advanced NLP model upgrade
+*  Role‑based admin permissions
+*  Email notifications for high‑priority complaints
+*  Analytics & insights dashboard
+*  Cloud database (PostgreSQL / Firestore)
+*  Advanced NLP model upgrade
 
 ---
 
@@ -137,10 +128,6 @@ Admins can:
 **Complaint to Action System** demonstrates how AI, authentication, and thoughtful system design can convert unstructured complaints into **clear, actionable priorities**.
 
 Built to be simple, scalable, and impactful — ideal for **hackathons, academic reviews, and real‑world adaptation**.
-
----
-
-### 👤 Author
 
 **Mann Shah**
 Hackathon / Academic Project
